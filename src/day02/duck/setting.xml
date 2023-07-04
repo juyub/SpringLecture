@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:p="http://www.springframework.org/schema/p"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+      
+<bean id="mallard" class="day02.duck.MallardDuck" />
+<bean id="rubber" class="day02.duck.RubberDuck" />
+<bean id="decoy" class="day02.duck.DecoyDuck" />
+
+<bean id="flyNoWay" class="day02.duck.fly.FlyNoWay" />
+<bean id="flyWithWings" class="day02.duck.fly.FlyWithWings" />
+
+<bean id="quack" class="day02.duck.quack.Quack" />
+<bean id="muteQuack" class="day02.duck.quack.MuteQuack" />
+<bean id="squeak" class="day02.duck.quack.Squeak" />
+
+<bean id="duck" class="day02.duck.MallardDuck">
+  <property name="flyBehavior" ref="flyWithWings" />
+  <property name="quackBehavior" ref="quack" />
+</bean> 
+
+</beans>
