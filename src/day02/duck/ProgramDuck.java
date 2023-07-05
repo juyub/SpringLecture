@@ -8,12 +8,12 @@ public class ProgramDuck {
 	public static void main(String[] args) {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("day02/duck/setting.xml");
-	
+
 		Duck duck = context.getBean("duck", Duck.class);
 		duck.displayName();
 		duck.performQuack();
 		duck.performFly();
-		
+
 //		MallardDuck mallard = context.getBean(MallardDuck.class);
 //      mallard.displayName();
 //      mallard.performQuack();
@@ -28,7 +28,7 @@ public class ProgramDuck {
 //      decoy.displayName();
 //      decoy.performQuack();
 //      decoy.performFly();
-		
+
 	}
-	
+
 }

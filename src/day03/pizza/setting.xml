@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+<bean id="nYCheesePizza" class="day03.pizza.product.NYCheesePizza" />
+<bean id="nYVegPizza" class="day03.pizza.product.NYVegPizza" />
+<bean id="chicagoCheesePizza" class="day03.pizza.product.ChicagoCheesePizza" />
+<bean id="chicagoVegPizza" class="day03.pizza.product.ChicagoVegPizza" />
+ 
+<bean id="nYPizzaStore" class="day03.pizza.creator.NYPizzaStore" />
+<bean id="chicagoPizzaStore" class="day03.pizza.creator.ChicagoPizzaStore" />
+ 
+<bean id="cheese" class="day03.pizza.creator.NYPizzaStore">
+	<property name="pizza" ref="nYCheesePizza" />
+</bean> 
+
+<bean id="veg" class="day03.pizza.creator.NYPizzaStore">
+	<property name="pizza" ref="nYVegPizza" />
+</bean> 
+
+
+
+</beans>
