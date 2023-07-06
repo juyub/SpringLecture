@@ -14,7 +14,7 @@ public class PizzaMain {
 		ApplicationContext context = new ClassPathXmlApplicationContext("day03/pizza/setting.xml");
 
 		PizzaStore pizzaStore = new NYPizzaStore();
-		Pizza pizza = pizzaStore.createPizza("cheese");
+		Pizza pizza = pizzaStore.createPizza("veg");
 		pizza.orderPizza();
 		pizza.displayName();
 		

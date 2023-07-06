@@ -6,7 +6,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-
 <bean id="nYCheesePizza" class="day03.pizza.product.NYCheesePizza" />
 <bean id="nYVegPizza" class="day03.pizza.product.NYVegPizza" />
 <bean id="chicagoCheesePizza" class="day03.pizza.product.ChicagoCheesePizza" />
@@ -22,7 +21,5 @@
 <bean id="veg" class="day03.pizza.creator.NYPizzaStore">
 	<property name="pizza" ref="nYVegPizza" />
 </bean> 
-
-
 
 </beans>
